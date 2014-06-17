@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+<script type="text/javascript" src="https://assets.staging.yammer.com/assets/platform_embed.js"></script>
+<h1>Embed Test Page</h1>
+<div id="embedded-feed" style="height:800px;width:500px;"></div>
+<script>
+yam.connect.embedFeed({
+  container: '#embedded-feed'
+        , network: 'freeyamnetwork.com'
+        , feedType: 'group'
+        , feedId: '80985'
+        , config: {
+             use_sso: false
+             , header: true
+             , footer: true
+             , showOpenGraphPreview: false
+             , defaultToCanonical: false
+             , hideNetworkName: false
+        }
+    });
+</script>
+
+
+</body>
+</html>
