@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://assets.staging.yammer.com/assets/platform_embed.js"></script>
+</head>
+<body><span id="yammer-login"></span>
+	<div id="feed">Open Graph Feed</div>
+	<div id="feedHolder">
+		<div id="og-feed" style="width: 400px; height: 700px;"></div>
+	</div>
+	<script>
+
+				yam.connect.embedFeed({
+					container: "#og-feed",
+					feedType: "open-graph"
+				, feedId: ''
+		        , config: {
+		             use_sso: false
+		             , header: true
+		             , footer: true
+		             , showOpenGraphPreview: true
+		             , defaultToCanonical: false
+		             , hideNetworkName: false
+		                , promptText: 'Comment on this deal'
+
+		        }
+		        , objectProperties: {
+		        url: "https://www.bing.com",
+		          image : "https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/octofication.png"
+		        }
+		    });
+</script>
+</body>
+
+</html>

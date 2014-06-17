@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+<script type="text/javascript" src="https://assets.staging.yammer.com/assets/platform_embed.js"></script>
+<h1>Embed Test Page</h1>
+<div id="embedded-feed" style="height:800px;width:500px;"></div>
+<script>
+yam.connect.embedFeed({
+container: "#embedded-feed",
+feedType: "open-graph",
+config: {
+promptText: "Comment on this customer"
+}
+
+});
+</script>
+
+
+</body>
+</html>
