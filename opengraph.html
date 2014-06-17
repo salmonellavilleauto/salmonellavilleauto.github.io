@@ -13,9 +13,10 @@
 	<script>
 
 				yam.connect.embedFeed({
-					container: "#og-feed",
-					feedType: "open-graph"
-				, feedId: ''
+					container: "#og-feed"
+					,network: 'freeyamnetwork.com'
+					,feedType: "open-graph"
+					, feedId: ''
 		        , config: {
 		             use_sso: false
 		             , header: true
@@ -28,7 +29,8 @@
 		        }
 		        , objectProperties: {
 		        url: "https://www.cnn.com",
-		          image : "https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/octofication.png"
+		        image : "https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/octofication.png",
+		        type: 
 		        }
 		    });
 </script>
