@@ -1,0 +1,29 @@
+<html>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+ $.getScript("https://assets.yammer.com/assets/platform_embed.js", function(){
+		yam.connect.embedFeed({  
+			container: '#embedded-feed'         
+			, network: 'microsoft.com'        
+			, feedType: 'open-graph'        
+			, feedId: ''       
+			, config: {             
+				use_sso: true             
+				, header: false             
+				, footer: false             
+				, showOpenGraphPreview: false             
+				, defaultToCanonical: false             
+				, hideNetworkName: false                
+				, promptText: 'Say something about this story'        
+			}        
+			, objectProperties: {           
+				url: 'http://nichob-dev/prototypes/prototype.html?page=example_story_1'          
+				, type: 'page'        
+			}    
+		});
+	
+	});
+	</script>
+	<script src="msoil.js"></script>
+	<div id="embedded-feed" class="embedded-feed"></div>
+ </html>
