@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+<script type="text/javascript" data-app-id="nnxy3gtdvfS03cVsvt8Dg" src="https://assets.staging.yammer.com/assets/platform_js_sdk.js"></script>
+<h1>JavaScript SDK</h1>
+<div id="msg"></di>
+<script>
+function sdkLoaded() {
+    yam.$('#msg').html('<p>The JavaScript SDK has been loaded into this page.</p>');
+}
+function error(err) {
+    yam.$('#msg').html('<p>The was a problem.</p>').css('color', 'red');
+    if(err) { console.log(err); }
+}
+function setup() {
+    yam.getLoginStatus(function(res) {
+        if(res.authResponse) {
+            sdkLoaded();
+        } else {
+            yam.login(function(res) {
+                if(res.authResponse) {
+                    sdkLoaded();
+                } else {
+                    error(res);
+                }
+            });
+        }
+    });
+}
+yam.$(setup);
+</script>
+
+
+</body>
+</html>
